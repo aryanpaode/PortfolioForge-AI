@@ -163,13 +163,14 @@ The app will provide suggestions such as:
 | Component | Technology |
 |---|---|
 | Mobile App Development | Android Studio |
-| Frontend UI | XML |
-| Programming Language | Java |
-| Local Database | SQLite |
+| Frontend UI | Jetpack Compose with Material 3 |
+| Programming Language | Kotlin |
+| Local Database | Room Database over SQLite |
 | Cloud Database | Firebase Firestore |
 | Authentication | Firebase Authentication |
 | File Storage | Firebase Storage |
-| OCR/Text Extraction | OCR/Text Recognition module |
+| OCR/Text Extraction | Google ML Kit Text Recognition |
+| AI/Skill Intelligence | OCR-based extraction, skill categorization, resume scoring, and smart suggestions |
 | Portfolio Hosting | Firebase Hosting / GitHub Pages |
 | Version Control | GitHub |
 

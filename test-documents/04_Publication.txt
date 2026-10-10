@@ -1,0 +1,8 @@
+SYNTHETIC TEST INPUT - NOT A CREDENTIAL
+
+Publication record
+Paper title: Efficient Cloud Scheduling
+Publisher: Example Press
+Year: 2026
+Published by Example Press
+https://example.org/papers/efficient-cloud-scheduling

@@ -1,0 +1,25 @@
+01_Course_RAG → Certification
+CareerItemEntity(id=ed571402-571f-335b-83b0-0375e3707897, type=Certification, title=Retrieval-Augmented Generation (RAG), subtitle=IBM / Coursera, description=Course completed, date=October 2026, link=https://www.coursera.org/account/accomplishments/verify/EXAMPLE, sourceDocumentId=01_Course_RAG)
+Skills: Retrieval-Augmented Generation (RAG)
+Warnings: 
+
+02_Conference_ICSCES → Conference
+CareerItemEntity(id=08beee02-2614-31df-b1f3-644382396ede, type=Conference, title=ICSCES, subtitle=Example Institute, description=Participant, date=September 2026, link=, sourceDocumentId=02_Conference_ICSCES)
+Skills: 
+Warnings: Conference subjects are topic suggestions, not proof of proficiency. They start unchecked; select only skills you can substantiate.
+
+03_Internship → Internship
+CareerItemEntity(id=8e0e3fff-21f8-3a13-96fd-c2ffef27c3c1, type=Internship, title=Network Intern, subtitle=Example Networks Pvt. Ltd, description=Configured VLANs and VPNs.
+Maintained Windows Server and NAS systems., date=May 2026 - July 2026, link=, sourceDocumentId=03_Internship)
+Skills: NAS, VLAN, VPN, Windows Server
+Warnings: 
+
+04_Publication → Publication
+CareerItemEntity(id=497e05c2-97f9-30f3-9308-9e4941986d2a, type=Publication, title=Efficient Cloud Scheduling, subtitle=Example Press, description=, date=2026, link=https://example.org/papers/efficient-cloud-scheduling, sourceDocumentId=04_Publication)
+Skills: 
+Warnings: 
+
+05_Certificate_ZeroSkills → Certification
+CareerItemEntity(id=aae6a51b-d1ea-3c35-bc82-467d6126ab27, type=Certification, title=Classical Philosophy, subtitle=Example Institute, description=Course completed, date=May 2026, link=, sourceDocumentId=05_Certificate_ZeroSkills)
+Skills: 
+Warnings: 

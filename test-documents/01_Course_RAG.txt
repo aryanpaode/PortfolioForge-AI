@@ -1,0 +1,9 @@
+SYNTHETIC TEST INPUT - NOT A CREDENTIAL
+
+Coursera
+Test Student
+has successfully completed
+Retrieval-Augmented Generation (RAG)
+an online course authorized by IBM and offered through Coursera
+Completion date: October 3, 2026
+https://www.coursera.org/account/accomplishments/verify/EXAMPLE

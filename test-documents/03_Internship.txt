@@ -1,0 +1,9 @@
+SYNTHETIC TEST INPUT - NOT A CREDENTIAL
+
+Internship Certificate
+Name: Test Student
+Company: Example Networks Pvt. Ltd.
+Role: Network Intern
+Period: May 2026 - July 2026
+Tasks: Configured VLANs and VPNs.
+Maintained Windows Server and NAS systems.

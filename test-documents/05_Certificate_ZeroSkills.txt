@@ -1,0 +1,7 @@
+SYNTHETIC TEST INPUT - NOT A CREDENTIAL
+
+Certificate of Completion
+Name: Test Student
+Course: Classical Philosophy
+Issuer: Example Institute
+Completion date: May 2026

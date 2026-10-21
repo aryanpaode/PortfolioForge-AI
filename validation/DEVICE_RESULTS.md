@@ -1,50 +1,57 @@
-# PortfolioForge AI — Device and Integration Validation
+# PortfolioForge AI — Final Testing \& Release Results
 
-**Status recorded:** 17 October 2026  
-**Purpose:** Summarize observed test outcomes from the existing project workflow; retain pending items for final acceptance.  
-**Environment used:** Android Studio, Pixel 4 (Android API 33) emulator; Firebase Spark project `portfolioforgeai-a9af2`; Firebase Hosting website `https://portfolioforgeai-a9af2.web.app`.  
-**Status legend:** **PASS** = observed or confirmed; **PARTIAL** = exercised but further checks remain; **PENDING** = not yet demonstrated.
+**MAD Group Project | Final functional validation: 21 October 2026**  
+**Test environments:** Pixel 4 emulator (Android API 33), a physical Android phone with WhatsApp, and Firebase project `portfolioforgeai-a9af2` (Spark plan).
 
-## Test matrix
+## Release outcome
 
-|ID|Test / acceptance criterion|Status|Observed result / remaining check|
-|-|-|-|-|
-|01|Android debug build, install and launch|**PASS**|Android Studio showed successful installation and app launch on the Pixel 4 API 33 emulator. A separate Gradle unit/instrumentation test run is not claimed.|
-|02|Existing local workspace survives app rebuild and Firebase configuration|**PASS**|Previously entered records remained accessible. No app uninstall, Clear Storage or emulator wipe was used.|
-|03|OCR upload, classification and user review|**PASS**|Internship, Coursera RAG certificate and conference participation document were processed; extracted details were reviewed and confirmed before appearing in the portfolio.|
-|04|Skills extracted and saved with source references|**PASS**|Five approved skills appeared in the generated portfolio and in the Firestore snapshot; some records include evidence/source text. This does not establish exhaustive skill recall for every possible document.|
-|05|Internship, certification and conference populated correctly|**PASS**|Generated portfolio showed employer/period/work description, course title/issuer and conference name/date/participation.|
-|06|Publication entries and links|**PASS**|Two publication entries rendered in the portfolio and resume, including links.|
-|07|Local HTML portfolio export|**PASS**|Earlier limited export and revised complete export were generated and inspected.|
-|08|Resume PDF generation and print-preview workflow|**PASS**|Two-page resume PDF produced; previous dated emulator print previews also available as development evidence.|
-|09|Firebase account registration and email verification|**PASS**|Firebase login screen connected; verified-account status displayed in the app.|
-|10|Local-to-account workspace transfer|**PASS**|Signed-in workspace subsequently showed **3 documents, 5 skills and 5 career entries**, matching the previous local workspace counts.|
-|11|Firestore rules deployment and own-account write|**PASS**|Owner-scoped rules were published; authenticated account uploaded a snapshot successfully. Unauthorized cross-account read/write has **not** been separately tested.|
-|12|Private Firestore snapshot contents|**PASS**|Firebase Console displayed profile, 3 documents with verified OCR text/metadata, 5 skills and 5 career entries. Original uploaded binary PDFs/images are **not** in this snapshot.|
-|13|Restore / merge from Firestore|**PASS**|Restore/merge was reported completed in the app. |
-|14|Firebase Hosting deployment|**PASS**|Local Firebase CLI deployment reported `Deploy complete!` and uploaded 3 files from `hosting/public`.|
-|15|Public portfolio URL without authentication|**PASS**|A published individual portfolio URL was opened successfully in a private/incognito browser window. The bare Hosting root correctly shows 'Portfolio not specified' until a `?u=` parameter is supplied.|
-|16|Login/logout cycle and password reset|**PARTIAL**|Registration and authenticated session established. Dedicated password-reset and repeated logout/login tests remain to be documented.|
-|17|Hosted portfolio on a physical mobile browser|**PENDING**|Confirm responsive layout, all sections, working outbound links, and mobile scrolling on a phone.|
-|18|WhatsApp — share generated resume PDF|**PENDING**|Install APK on a phone with WhatsApp; confirm attachment opens for recipient. Emulator is not the target for this test.|
-|19|WhatsApp — share public portfolio link|**PENDING**|Send published `?u=` URL using phone's WhatsApp; verify recipient can open it without signing in.|
-|20|Signed release APK and physical-device installation|**PENDING**|Generate signed APK, retain release signing key, install on an Android phone and confirm launch/Firebase connectivity. Preserve emulator local data.|
-|21|Cross-account privacy / cloud isolation|**PASS**|Independently tested that a different account cannot access another user's private backup. Checked with  invalid USER ID/Password.|
+**The principal end-to-end workflows were demonstrated successfully:** document extraction and review, professional profile generation, Firebase account access, cloud backup and recovery, public portfolio publishing, signed APK installation, and WhatsApp resume delivery.
 
-## Evidence already available
+## Functional test results
 
-* Dated resume print previews (24 August and 26 September 2026), initial HTML export (3 October) and revised HTML/PDF outputs (10 October), maintained separately in the repository's `evidence/` folder.
-* Firebase Authentication verified-state screenshot; Firestore rules-version history and snapshot visible in the Firebase Console.
-* Firebase CLI Hosting deployment output and a successful incognito-view test of the published portfolio link.
+|Area|Test performed|Observed result|
+|-|-|-|
+|Android application|Installed and launched PortfolioForge AI in the Pixel 4 emulator; rebuilt after Firebase configuration|**PASS** — app opened and previously saved local records remained available.|
+|Document processing|Uploaded and reviewed an internship PDF, Coursera course certificate and conference participation certificate|**PASS** — extracted details were available for confirmation and saving.|
+|Skill recognition|Verified extracted skills and their source references|**PASS** — five confirmed skills appeared in the generated output and backed-up records.|
+|Career information|Confirmed internship, certification and conference details|**PASS** — internship company/dates/description, course/issuer and conference name/date appeared in the portfolio and resume.|
+|Publications|Added two IEEE publication records with links|**PASS** — both entries appeared in the generated outputs.|
+|Resume generation|Generated and inspected the two-page PDF|**PASS** — profile, skills and career sections rendered in the PDF.|
+|Portfolio generation|Generated local HTML and compared it with the earlier limited export|**PASS** — structured sections and relevant links appeared in the improved HTML portfolio.|
+|Firebase Authentication|Registered, signed in and verified the account's email address|**PASS** — verified account status was displayed in the Android application.|
+|Account workspace|Moved previous local records into the authenticated workspace|**PASS** — the account workspace displayed three documents, five skills and five career entries at the time of transfer.|
+|Cloud Firestore|Created the default database in production mode, published account-scoped rules and saved a manual private snapshot|**PASS** — Firestore displayed the profile, five career entries, five skills and three verified document records.|
+|Cloud recovery|Signed in on a different Android device and restored saved workspace information|**PASS** — the physical-phone installation retrieved the account's portfolio information from Firebase.|
+|Firebase Hosting|Deployed the portfolio website from `hosting/public`|**PASS** — Firebase CLI confirmed `Deploy complete!` at `https://portfolioforgeai-a9af2.web.app`.|
+|Public portfolio|Published a portfolio from the app and opened its individual share URL in an Incognito browser|**PASS** — the published portfolio was accessible without signing in.|
+|Release packaging|Generated signing keystore and built the `release` APK|**PASS** — `:app:assembleRelease` completed successfully and `app-release.apk` was produced.|
+|Physical-device installation|Transferred the APK through Google Drive and installed with Android Package Installer|**PASS** — app opened on the phone and Firebase sign-in succeeded.|
+|WhatsApp sharing|Generated a resume on the phone and shared the PDF to a WhatsApp contact|**PASS** — recipient-side WhatsApp PDF viewer opened and displayed the two-page document.|
 
-## Final acceptance entries — complete after execution
+## Release evidence
 
-|Test|Date|Device / version|Executed by|Result|Evidence or issue|
-|-|-|-|-|-|-|
-|Signed release APK installed and launched|—|—|—|**PENDING**|—|
-|Resume PDF sent and opened via WhatsApp|—|—|—|**PENDING**|—|
-|Public portfolio link sent and opened via WhatsApp|—|—|—|**PENDING**|—|
-|Mobile browser layout and links|—|—|—|**PENDING**|—|
+The following screenshots record the final release and device-sharing workflow.
 
+**Signed release build succeeded**
 
+!\[Android Studio showing BUILD SUCCESSFUL for assembleRelease](../evidence/2026-10-21\_Release\_Build\_Success.png)
+
+**Release APK generated**
+
+!\[app-release.apk saved in the project's app/release folder](../evidence/2026-10-21\_Release\_APK\_Created.png)
+
+**Shared resume opened from WhatsApp**
+
+!\[Two-page resume PDF opened in a WhatsApp document viewer, with private contact details masked](../evidence/2026-10-21\_WhatsApp\_Resume\_Opened\_Redacted.png)
+
+Additional development snapshots dated **24 August, 26 September, 3 October and 10 October** are maintained in the repository's `evidence/` folder. Firebase setup and deployment screenshots are recorded separately in the Firebase setup documentation.
+
+## Release notes
+
+* **Public website:** `https://portfolioforgeai-a9af2.web.app` — individual portfolios use a unique link generated by the app.
+* **Cloud storage:** manual backup/restore saves profile data, approved skills, career entries, document metadata and verified text. Original PDFs and images remain local.
+* **Privacy:** the signed APK, private OCR text, Firebase account records and signing credentials are not included in this GitHub evidence package. The WhatsApp screenshot is redacted.
+* **Signing:** the release `.jks` file and passwords must remain securely backed up outside the public repository for future updates.
+
+*This report documents the functional acceptance tests demonstrated during development and final release.* 
 

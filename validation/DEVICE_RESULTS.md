@@ -53,4 +53,4 @@ Additional development snapshots dated **24 August, 26 September, 3 October and 
 - **Privacy:** the signed APK, private OCR text, Firebase account records and signing credentials are not included in this GitHub evidence package. The WhatsApp screenshot is redacted.
 - **Signing:** the release `.jks` file and passwords must remain securely backed up outside the public repository for future updates.
 
-*This report documents the functional acceptance tests demonstrated during development and final release. It is not a claim of exhaustive security, load or device-compatibility certification.*
+*This report documents the functional acceptance tests demonstrated during development and final release.*

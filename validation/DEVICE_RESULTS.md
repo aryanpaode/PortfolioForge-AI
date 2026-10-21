@@ -33,10 +33,13 @@
 The following screenshots record the final release and device-sharing workflow.
 Signed release build succeeded
 <img src="../evidence/2026-10-21_Release_Build_Success.png" alt="Android Studio BUILD SUCCESSFUL for assembleRelease" width="800" />
+
 Release APK generated
 <img src="../evidence/2026-10-21_Release_APK_Created.png" alt="Signed release APK generated in the app release folder" width="800" />
+
 Shared resume opened from WhatsApp
 <img src="../evidence/2026-10-21_WhatsApp_Resume_Opened_Redacted.png" alt="Shared resume opened from WhatsApp with contact details redacted" width="800" />
+
 Additional development snapshots dated 24 August, 26 September, 3 October and 10 October are maintained in the repository's `evidence/` folder. Firebase setup and deployment screenshots are recorded separately in the Firebase setup documentation.
 
 ## Release notes

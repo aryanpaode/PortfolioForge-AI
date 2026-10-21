@@ -28,23 +28,16 @@
 |Physical-device installation|Transferred the APK through Google Drive and installed with Android Package Installer|**PASS** — app opened on the phone and Firebase sign-in succeeded.|
 |WhatsApp sharing|Generated a resume on the phone and shared the PDF to a WhatsApp contact|**PASS** — recipient-side WhatsApp PDF viewer opened and displayed the two-page document.|
 
-## Release evidence
+**Release evidence**
 
 The following screenshots record the final release and device-sharing workflow.
-
-**Signed release build succeeded**
-
-!\[Android Studio showing BUILD SUCCESSFUL for assembleRelease](../evidence/2026-10-21\_Release\_Build\_Success.png)
-
-**Release APK generated**
-
-!\[app-release.apk saved in the project's app/release folder](../evidence/2026-10-21\_Release\_APK\_Created.png)
-
-**Shared resume opened from WhatsApp**
-
-!\[Two-page resume PDF opened in a WhatsApp document viewer, with private contact details masked](../evidence/2026-10-21\_WhatsApp\_Resume\_Opened\_Redacted.png)
-
-Additional development snapshots dated **24 August, 26 September, 3 October and 10 October** are maintained in the repository's `evidence/` folder. Firebase setup and deployment screenshots are recorded separately in the Firebase setup documentation.
+Signed release build succeeded
+<img src="../evidence/2026-10-21_Release_Build_Success.png" alt="Android Studio BUILD SUCCESSFUL for assembleRelease" width="800" />
+Release APK generated
+<img src="../evidence/2026-10-21_Release_APK_Created.png" alt="Signed release APK generated in the app release folder" width="800" />
+Shared resume opened from WhatsApp
+<img src="../evidence/2026-10-21_WhatsApp_Resume_Opened_Redacted.png" alt="Shared resume opened from WhatsApp with contact details redacted" width="800" />
+Additional development snapshots dated 24 August, 26 September, 3 October and 10 October are maintained in the repository's `evidence/` folder. Firebase setup and deployment screenshots are recorded separately in the Firebase setup documentation.
 
 ## Release notes
 
